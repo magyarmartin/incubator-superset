@@ -58,7 +58,7 @@ services:
     command: ["flask", "run", "-p", "8088", "--with-threads", "--reload", "--debugger", "--host=0.0.0.0"]
     restart: unless-stopped
     ports:
-      - 8088:8088
+      - ${SUPERSET_PORT}:8088
     depends_on: *superset-depends-on
     volumes: *superset-volumes
 
